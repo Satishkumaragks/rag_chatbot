@@ -93,6 +93,27 @@ Expected behavior:
 
   ---
 
+
+---
+
+## Expected Result (Screenshot Style)
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Question: list previous questions i asked you?                              │
+│                                                                              │
+│ Answer:                                                                      │
+│ The retrieved context does not provide a list of your previous questions.    │
+│ However, based on our current interaction, here are the questions you've     │
+│ asked during this session:                                                   │
+│                                                                              │
+│ 1. What is DevOps?                                                           │
+│ 2. What was the previous question?                                           │
+│ 3. What is my name?                                                          │
+│ 4. List previous questions I asked you? (twice)                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
 ## Chat Flow
 
 ```mermaid
