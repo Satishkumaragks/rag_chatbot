@@ -90,3 +90,20 @@ Expected behavior:
   - clear the collection before adding, or
   - upsert using fixed IDs.
 - `persist_directory="./chroma_db"` makes vectors persistent across runs.
+
+  ---
+
+## Chat Flow
+
+```mermaid
+flowchart TD
+    A[User types question]
+    B[RunnableWithMessageHistory injects session history]
+    C[pre_process() -> similarity_search() -> top 2 docs from Chroma]
+    D[ChatPromptTemplate fills: context + history + question]
+    E[GPT-4o generates answer]
+    F[StrOutputParser() -> plain string]
+    G[Answer printed + saved to session history]
+
+    A --> B --> C --> D --> E --> F --> G
+```
